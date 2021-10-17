@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"tasks": {
+		"version": "2.0.0"
+	},
+	"settings": {
+		"telemetry.telemetryLevel": "off",
+		"telemetry.enableTelemetry": false,
+		"window.autoDetectColorScheme": true
+	}
+}
