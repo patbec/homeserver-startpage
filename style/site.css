@@ -103,6 +103,10 @@ p {
 
     color: var(--color-font);
     text-align: center;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .header {
@@ -137,4 +141,11 @@ p {
 .container__item {
     margin-left: 40px;
     margin-right: 40px;
+
+    max-width: 120px;
+}
+
+img {
+    padding-left: 10px;
+    padding-right: 10px;
 }
