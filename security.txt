@@ -1,0 +1,5 @@
+Contact: mailto:thinkbox-vpn@outlook.de
+Expires: 2025-03-31T22:00:00.000Z
+Preferred-Languages: en,de
+Canonical: https://thinkbox-vpn.de/security.txt
+
