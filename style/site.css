@@ -68,6 +68,10 @@
         --color-font: #ffffff;
         --color-icon: #ffffff;
     }
+
+    .container__item img {
+        filter: brightness(0.9);
+    }
 }
 
 body,
