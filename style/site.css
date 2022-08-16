@@ -56,8 +56,11 @@
     --color-header-background: #fbfbfb;
     --color-header-border: #dbdbdb;
     --color-background: #ffffff;
-    --color-font: black;
-    --color-icon: #FF9900;
+    --color-text: black;
+
+    --font-weight: normal;
+    --image-filter: none;
+    --border-width: thin;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,12 +68,24 @@
         --color-header-background: #161b22;
         --color-header-border: #2f2f32;
         --color-background: #0d1117;
-        --color-font: #ffffff;
-        --color-icon: #ffffff;
-    }
+        --color-text: #ffffff;
 
-    .container__item img {
-        filter: brightness(0.9);
+        --font-weight: normal;
+        --image-filter: brightness(0.9);
+        --border-width: thin;
+    }
+}
+
+@media (forced-colors: active) {
+    :root {
+        --color-header-background: canvas;
+        --color-header-border: canvasText;
+        --color-background: canvas;
+        --color-text: canvasText;
+
+        --font-weight: 600;
+        --image-filter: contrast(1.5);
+        --border-width: 1.5px;
     }
 }
 
@@ -84,31 +99,29 @@ html {
 body {
     display: grid;
     grid-template-rows: min-content auto;
-    height: 100%;
+
+    font-family: system-ui, Roboto;
+    font-weight: var(--font-weight);
+
+    color: var(--color-text);
     background-color: var(--color-background);
 }
 
 h2 {
-    font-family: system-ui, Roboto;
     font-weight: normal;
     letter-spacing: normal;
     line-height: 1.5;
 
-    color: var(--color-font);
     margin: 0px;
 }
 
 p {
-    font-family: system-ui, Roboto;
-    font-size: 16px;
-    font-weight: normal;
     letter-spacing: normal;
     line-height: 1.5;
 
-    color: var(--color-font);
     text-align: center;
-
     text-overflow: ellipsis;
+
     white-space: nowrap;
     overflow: hidden;
 }
@@ -116,10 +129,16 @@ p {
 .header {
     background-color: var(--color-header-background);
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-width: var(--border-width);
     border-bottom-color: var(--color-header-border);
 
     margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 275px) {
+    .header__image {
+        display: none;
+    }
 }
 
 .header__image {
@@ -131,7 +150,6 @@ p {
 
 .header__text {
     padding: 20px;
-    padding-left: 3vw;
 }
 
 .container {
@@ -151,4 +169,7 @@ p {
 img {
     padding-left: 10px;
     padding-right: 10px;
+
+    filter: var(--image-filter);
+    user-select: none;
 }
