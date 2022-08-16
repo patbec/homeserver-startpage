@@ -31,12 +31,13 @@ A short list of what features the front-end offers.
 ✅ None<br>
 
 <br>
+
 <sup>(1)</sup>
 High contrast view is for people with low vision. Activate the `forced-colors` scheme under `More Tools -> Rendering` in Chrome Dev Tools to get a preview.<br>
-
 The colors used are determined by the browser, see at W3C CSS Color Module Level 4 - [6.2. System Colors](https://www.w3.org/TR/css-color-4/#css-system-colors).
 
 <br>
+
 <sup>(2)</sup>
 Some application icons are not available as vector graphics, they have been redrawn and may differ slightly from the manufacturer's icon. See [icon-node-red.svg](/images/icon-node-red.svg) as an example, I also upload customized files to [this](https://worldvectorlogo.com/logo/node-red-2) page.
 
@@ -46,4 +47,4 @@ This project is licensed under MIT - See the [LICENSE](/LICENSE) file for more i
 
 ---
 
-&uarr; [Back to top](#thinkbox-vpn.de)
+&uarr; [Back to top](#thinkbox-vpnde)
