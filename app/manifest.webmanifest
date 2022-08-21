@@ -1,0 +1,29 @@
+{
+    "name": "Services on thinkbox.center",
+    "short_name": "thinkbox.center",
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "any",
+    "description": "A simple overview page of what services are available under this domain.",
+    "categories": [
+        "developer",
+        "utilities",
+        "productivity",
+        "navigation"
+    ],
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "docs/website.png",
+            "sizes": "2346x1486",
+            "platform": "wide",
+            "label": "Sample listing of applications available under this domain.."
+        }
+    ]
+}
