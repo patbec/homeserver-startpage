@@ -3,6 +3,8 @@
     "short_name": "thinkbox.center",
     "version": "1.0",
     "start_url": "/",
+    "lang": "en",
+    "theme_color": "#ff9900",
     "display": "standalone",
     "orientation": "any",
     "description": "A simple overview page of what services are available under this domain.",
@@ -12,20 +14,17 @@
         "productivity",
         "navigation"
     ],
-    "background": {
-        "service_worker": "serviceworker.js"
-    },
     "icons": [
         {
-            "src": "/favicon.svg",
+            "src": "/images/favicon.svg",
             "sizes": "any",
-            "type": "image/svg",
+            "type": "image/svg+xml",
             "purpose": "any"
         },
         {
-            "src": "/images/mask.svg",
+            "src": "/images/manifest-mask.svg",
             "sizes": "any",
-            "type": "image/svg",
+            "type": "image/svg+xml",
             "purpose": "maskable"
         }
     ],
@@ -34,7 +33,7 @@
             "src": "/docs/website.png",
             "sizes": "2346x1486",
             "platform": "wide",
-            "label": "Sample listing of applications available under this domain.."
+            "label": "Sample listing of applications available under this domain."
         }
     ]
 }
