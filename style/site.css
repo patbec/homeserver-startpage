@@ -63,32 +63,6 @@
     --border-style: solid;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-header-background: #161b22;
-        --color-header-border: #2f2f32;
-        --color-background: #0d1117;
-        --color-link: white;
-        --color-text: CanvasText;
-
-        --image-filter: brightness(0.9);
-        --border-style: solid;
-    }
-}
-
-@media (forced-colors: active) {
-    :root {
-        --color-header-background: WindowBackground;
-        --color-header-border: WindowText;
-        --color-background: WindowBackground;
-        --color-link: LinkText;
-        --color-text: WindowText;
-
-        --image-filter: contrast(1.5);
-        --border-style: none;
-    }
-}
-
 body,
 html {
     height: 100%;
@@ -103,8 +77,8 @@ body {
     font-family: system-ui, Roboto;
     font-weight: normal;
 
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: CanvasText;
+    background-color: Canvas;
 }
 
 h2 {
@@ -132,11 +106,8 @@ img {
 }
 
 header {
-    background-color: var(--color-header-background);
-
-    border-bottom-style: var(--border-style);
-    border-bottom-color: var(--color-header-border);
-    border-bottom-width: thin;
+    background-color: #fbfbfb;
+    border-bottom: thin solid #dbdbdb;
 
     margin-bottom: 30px;
 }
@@ -170,7 +141,7 @@ main a {
 
     max-width: 200px;
 
-    color: var(--color-link);
+    color: CanvasText;
     text-decoration: none;
 }
 
@@ -186,12 +157,36 @@ main img {
     padding-bottom: 8px;
     padding-left: 50px;
     padding-right: 50px;
-
-    filter: var(--image-filter);
 }
 
 main p {
     padding-top: 8px;
     padding-bottom: 8px;
     margin: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: #161b22;
+        border-bottom: thin solid #2f2f32;
+    }
+
+    main img {
+        filter: brightness(0.9);
+    }
+}
+
+@media (forced-colors: active) {
+    header {
+        background-color: Canvas;
+        border-bottom: none;
+    }
+
+    main a {
+        color: LinkText;
+    }
+
+    main img {
+        filter: contrast(1.5);
+    }
 }
