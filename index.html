@@ -20,6 +20,12 @@
     <meta name="url" content="https://www.thinkbox.center">
     <meta name="author" content="pbecker, info@thinkbox.center">
     <meta name="description" content="A simple overview page of what services are available under this domain." />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/app/service-worker.js');
+        }
+    </script>
 </head>
 
 <body>
@@ -29,37 +35,37 @@
     </header>
 
     <main>
-        <a rel="noopener" href="https://node.thinkbox.center">
+        <a rel="noopener" href="https://node.thinkbox.center" title="Open the Node-RED dashboard.">
             <img height="100" width="100" src="images/icon-node-red.svg" />
 
             <p>Node-RED</p>
         </a>
-        <a rel="noopener" href="https://zigbee.thinkbox.center">
+        <a rel="noopener" href="https://zigbee.thinkbox.center" title="Open the Zigbee2MQTT dashboard.">
             <img height="100" width="100" src="images/icon-zigbee2mqtt.png" />
 
             <p>Zigbee2MQTT</p>
         </a>
-        <a rel="noopener" href="https://grafana.thinkbox.center">
+        <a rel="noopener" href="https://grafana.thinkbox.center" title="Open the Grafana dashboard.">
             <img height="100" width="100" src="images/icon-grafana.svg" />
 
             <p>Grafana</p>
         </a>
-        <a rel="noopener" href="https://portainer.thinkbox.center">
+        <a rel="noopener" href="https://portainer.thinkbox.center" title="Open the Portainer dashboard.">
             <img height="100" width="100" src="images/icon-portainer.svg" />
 
             <p>Portainer</p>
         </a>
-        <a rel="noopener" href="https://syncthing.thinkbox.center">
+        <a rel="noopener" href="https://syncthing.thinkbox.center" title="Open the Syncthing dashboard.">
             <img height="100" width="100" src="images/icon-syncthing.svg" />
 
             <p>Syncthing</p>
         </a>
-        <a rel="noopener" href="https://haas.thinkbox.center">
+        <a rel="noopener" href="https://haas.thinkbox.center" title="Open the Home Assistant dashboard.">
             <img height="100" width="100" src="images/icon-home-assistant.svg" />
 
             <p>Home Assistant</p>
         </a>
-        <a rel="noopener" href="https://hoppscotch.thinkbox.center">
+        <a rel="noopener" href="https://hoppscotch.thinkbox.center" title="Open the Hoppscotch dashboard.">
             <img height="100" width="100" src="images/icon-hoppscotch.png" />
 
             <p>Hoppscotch</p>
