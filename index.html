@@ -3,34 +3,41 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Services</title>
+    <title>Services on thinkbox.center</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
     <meta name="robots" content="nofollow">
 
-    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="style/site.css" type="text/css">
-    <link rel="manifest" href="app/manifest.webmanifest">
-    <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png" />
+    <!-- Default favicon with dark mode support -->
+    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
 
+    <!-- Safari icon -->
+    <link rel="mask-icon" href="images/favicon.svg" sizes="any" type="image/svg+xml" color="#ff9900">
+
+    <!-- Default style -->
+    <link rel="stylesheet" href="style/site.css" type="text/css">
+
+    <!-- WebApp support -->
+    <link rel="manifest" href="app/manifest.webmanifest" type="application/manifest+json">
+
+    <!-- Apple bookmark icon -->
+    <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png">
+
+    <!-- Supported color themes for correct native control rendering -->
     <meta name="color-scheme" content="light dark">
 
+    <!-- Background color for themes -->
     <meta name="theme-color" media="(prefers-color-scheme:light)" content="#ff9900">
     <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#161b22">
 
+    <!-- Meta informations -->
     <meta name="url" content="https://www.thinkbox.center">
     <meta name="author" content="pbecker, info@thinkbox.center">
     <meta name="description" content="A simple overview page of what services are available under this domain." />
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/app/service-worker.js');
-        }
-    </script>
 </head>
 
 <body>
     <header>
-        <img height="36" width="36" src="favicon.svg">
+        <img height="36" width="36" src="images/favicon.svg">
         <h2>Services on thinkbox.center</h2>
     </header>
 
