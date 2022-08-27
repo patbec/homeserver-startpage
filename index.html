@@ -5,9 +5,11 @@
     <meta charset="utf-8" />
     <title>Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+    <meta name="robots" content="nofollow">
 
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="style/site.css" type="text/css">
+    <link rel="manifest" href="app/manifest.webmanifest">
     <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png" />
 
     <meta name="color-scheme" content="light dark">
@@ -16,66 +18,59 @@
     <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#161b22">
 
     <meta name="url" content="https://www.thinkbox.center">
-    <meta name="author" content="Patrick Becker, info@thinkbox.center">
+    <meta name="author" content="pbecker, info@thinkbox.center">
     <meta name="description" content="A simple overview page of what services are available under this domain." />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/app/service-worker.js');
+        }
+    </script>
 </head>
 
 <body>
-    <div class="header">
-        <img class="header__image" src="favicon.svg" width="36px" height="36px">
-        <h2 class="header__text">Services on thinkbox.local</h2>
-    </div>
+    <header>
+        <img height="36" width="36" src="favicon.svg">
+        <h2>Services on thinkbox.center</h2>
+    </header>
 
-    <div class="container">
-        <div class="container__item">
-            <a href="https://node.thinkbox.center">
-                <img height="100" width="100" src="images/icon-node-red.svg" />
-            </a>
+    <main>
+        <a rel="noopener" href="https://node.thinkbox.center" title="Open the Node-RED dashboard.">
+            <img height="100" width="100" src="images/icon-node-red.svg" />
+
             <p>Node-RED</p>
-        </div>
-        <div class="container__item">
-            <a href="https://zigbee.thinkbox.center">
-                <img height="100" width="100" src="images/icon-zigbee2mqtt.png" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://zigbee.thinkbox.center" title="Open the Zigbee2MQTT dashboard.">
+            <img height="100" width="100" src="images/icon-zigbee2mqtt.png" />
+
             <p>Zigbee2MQTT</p>
-        </div>
-        <!-- <div class="container__item">
-            <a href="https://sinedo.thinkbox.center">
-                <img height="100" width="100" src="images/icon-sinedo.svg" />
-            </a>
-            <p>Sinedo</p>
-        </div> -->
-        <div class="container__item">
-            <a href="https://grafana.thinkbox.center">
-                <img height="100" width="100" src="images/icon-grafana.svg" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://grafana.thinkbox.center" title="Open the Grafana dashboard.">
+            <img height="100" width="100" src="images/icon-grafana.svg" />
+
             <p>Grafana</p>
-        </div>
-        <div class="container__item">
-            <a href="https://portainer.thinkbox.center">
-                <img height="100" width="100" src="images/icon-portainer.svg" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://portainer.thinkbox.center" title="Open the Portainer dashboard.">
+            <img height="100" width="100" src="images/icon-portainer.svg" />
+
             <p>Portainer</p>
-        </div>
-        <div class="container__item">
-            <a href="https://syncthing.thinkbox.center">
-                <img height="100" width="100" src="images/icon-syncthing.svg" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://syncthing.thinkbox.center" title="Open the Syncthing dashboard.">
+            <img height="100" width="100" src="images/icon-syncthing.svg" />
+
             <p>Syncthing</p>
-        </div>
-        <div class="container__item">
-            <a href="https://haas.thinkbox.center">
-                <img height="100" width="100" src="images/icon-home-assistant.svg" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://haas.thinkbox.center" title="Open the Home Assistant dashboard.">
+            <img height="100" width="100" src="images/icon-home-assistant.svg" />
+
             <p>Home Assistant</p>
-        </div>
-        <div class="container__item">
-            <a href="https://hoppscotch.thinkbox.center">
-                <img height="100" width="100" src="images/icon-hoppscotch.png" />
-            </a>
+        </a>
+        <a rel="noopener" href="https://hoppscotch.thinkbox.center" title="Open the Hoppscotch dashboard.">
+            <img height="100" width="100" src="images/icon-hoppscotch.png" />
+
             <p>Hoppscotch</p>
-        </div>
-    </div>
+        </a>
+    </main>
 </body>
 
 </html>

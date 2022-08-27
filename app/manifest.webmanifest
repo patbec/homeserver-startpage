@@ -1,0 +1,40 @@
+{
+    "name": "Services on thinkbox.center",
+    "short_name": "thinkbox.center",
+    "version": "1.0",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "description": "A simple overview page of what services are available under this domain.",
+    "categories": [
+        "developer",
+        "utilities",
+        "productivity",
+        "navigation"
+    ],
+    "background": {
+        "service_worker": "serviceworker.js"
+    },
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/mask.svg",
+            "sizes": "any",
+            "type": "image/svg",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/docs/website.png",
+            "sizes": "2346x1486",
+            "platform": "wide",
+            "label": "Sample listing of applications available under this domain.."
+        }
+    ]
+}
