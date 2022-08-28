@@ -16,7 +16,7 @@
     ],
     "icons": [
         {
-            "src": "/images/favicon.svg",
+            "src": "/images/manifest-icon.svg",
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "any"
