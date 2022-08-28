@@ -5,6 +5,7 @@
     "start_url": "/",
     "lang": "en",
     "theme_color": "#ff9900",
+    "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "any",
     "description": "A simple overview page of what services are available under this domain.",
@@ -22,10 +23,16 @@
             "purpose": "any"
         },
         {
-            "src": "/images/manifest-mask.svg",
+            "src": "/images/mask.svg",
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "maskable"
+        },
+        {
+            "src": "/images/bookmark.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
     "screenshots": [
