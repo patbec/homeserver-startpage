@@ -53,18 +53,44 @@
 }
 
 :root {
-    --color-header-background: #fbfbfb;
-    --color-header-border: #dbdbdb;
     --color-background: white;
-    --color-link: CanvasText;
-    --color-text: CanvasText;
+    --color-header-background: #fbfbfb;
+    --color-header-border: thin solid #dbdbdb;
+
+    --color-text: black;
+    --color-link: black;
 
     --image-filter: none;
-    --border-style: solid;
 }
 
-body,
-html {
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #0d1117;
+        --color-header-background: #161b22;
+        --color-header-border: thin solid #2f2f32;
+
+        --color-text: white;
+        --color-link: white;
+
+        --image-filter: brightness(0.9);
+    }
+}
+
+@media (forced-colors: active) {
+    :root {
+        --color-background: Canvas;
+        --color-header-background: unset;
+        --color-header-border: none;
+
+        --color-text: CanvasText;
+        --color-link: LinkText;
+
+        --image-filter: contrast(1.5);
+    }
+}
+
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -77,8 +103,8 @@ body {
     font-family: system-ui, Roboto;
     font-weight: normal;
 
-    color: CanvasText;
-    background-color: Canvas;
+    color: var(--color-text);
+    background-color: var(--color-background)
 }
 
 h2 {
@@ -106,13 +132,13 @@ img {
 }
 
 header {
-    background-color: #fbfbfb;
-    border-bottom: thin solid #dbdbdb;
+    background-color: var(--color-header-background);
+    border-bottom: var(--color-header-border);
 
     margin-bottom: 30px;
 }
 
-@media only screen and (max-width: 275px) {
+@media only screen and (max-width: 285px) {
     header img {
         display: none;
     }
@@ -136,17 +162,10 @@ main {
     justify-content: center;
 }
 
-main a {
-    display: block;
-
-    max-width: 200px;
-
-    color: CanvasText;
-    text-decoration: none;
-}
-
-main a:hover {
-    text-decoration: underline;
+main p {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0px;
 }
 
 main img {
@@ -157,36 +176,19 @@ main img {
     padding-bottom: 8px;
     padding-left: 50px;
     padding-right: 50px;
+
+    filter: var(--image-filter);
 }
 
-main p {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin: 0px;
+main a {
+    display: block;
+
+    max-width: 200px;
+
+    color: var(--color-link);
+    text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    header {
-        background-color: #161b22;
-        border-bottom: thin solid #2f2f32;
-    }
-
-    main img {
-        filter: brightness(0.9);
-    }
-}
-
-@media (forced-colors: active) {
-    header {
-        background-color: Canvas;
-        border-bottom: none;
-    }
-
-    main a {
-        color: LinkText;
-    }
-
-    main img {
-        filter: contrast(1.5);
-    }
+main a:hover {
+    text-decoration: underline;
 }
