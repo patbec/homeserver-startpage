@@ -17,30 +17,22 @@
     ],
     "icons": [
         {
-            "src": "/images/favicon.svg",
+            "src": "images/favicon.svg",
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "any"
         },
         {
-            "src": "/images/mask.svg",
+            "src": "images/mask.svg",
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "maskable"
         },
         {
-            "src": "/images/bookmark.png",
+            "src": "images/bookmark.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
-        }
-    ],
-    "screenshots": [
-        {
-            "src": "/docs/website.png",
-            "sizes": "2346x1486",
-            "platform": "wide",
-            "label": "Sample listing of applications available under this domain."
         }
     ]
 }
