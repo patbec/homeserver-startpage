@@ -11,13 +11,7 @@
     <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
 
     <!-- Safari icon -->
-    <link rel="mask-icon" href="images/favicon.svg" sizes="any" type="image/svg+xml" color="#ff9900">
-
-    <!-- Default style -->
-    <link rel="stylesheet" href="style/site.css" type="text/css">
-
-    <!-- WebApp support -->
-    <link rel="manifest" href="manifest.webmanifest" type="application/manifest+json">
+    <link rel="mask-icon" href="images/mask-icon.svg" sizes="any" type="image/svg+xml" color="#ff9900">
 
     <!-- Apple bookmark icon -->
     <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png">
@@ -33,6 +27,149 @@
     <meta name="url" content="https://www.thinkbox.center">
     <meta name="author" content="pbecker, info@thinkbox.center">
     <meta name="description" content="A simple overview page of what services are available under this domain." />
+
+    <style>
+        :root {
+            --color-background: white;
+            --color-header-background: #fbfbfb;
+            --color-header-border: thin solid #dbdbdb;
+
+            --color-text: black;
+            --color-link: black;
+
+            --image-filter: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-background: #0d1117;
+                --color-header-background: #161b22;
+                --color-header-border: thin solid #2f2f32;
+
+                --color-text: white;
+                --color-link: white;
+
+                --image-filter: brightness(0.9);
+            }
+        }
+
+        @media (forced-colors: active) {
+            :root {
+                --color-background: Canvas;
+                --color-header-background: unset;
+                --color-header-border: none;
+
+                --color-text: CanvasText;
+                --color-link: LinkText;
+
+                --image-filter: contrast(1.5);
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: min-content auto;
+
+            font-family: system-ui, Arial, Helvetica;
+            font-weight: normal;
+
+            color: var(--color-text);
+            background-color: var(--color-background)
+        }
+
+        h2 {
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1.5;
+
+            margin: 0px;
+        }
+
+        p {
+            letter-spacing: normal;
+            line-height: 1.5;
+
+            text-align: center;
+            text-overflow: ellipsis;
+
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        img {
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        header {
+            background-color: var(--color-header-background);
+            border-bottom: var(--color-header-border);
+
+            margin-bottom: 30px;
+        }
+
+        @media only screen and (max-width: 285px) {
+            header img {
+                display: none;
+            }
+        }
+
+        header img {
+            float: left;
+            padding: 20px;
+            padding-left: 32px;
+            padding-right: 22px;
+        }
+
+        header h2 {
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main p {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin: 0px;
+        }
+
+        main img {
+            width: 100px;
+            height: 100px;
+
+            padding-top: 16px;
+            padding-bottom: 8px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            filter: var(--image-filter);
+        }
+
+        main a {
+            display: block;
+
+            max-width: 200px;
+
+            color: var(--color-link);
+            text-decoration: none;
+        }
+
+        main a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
