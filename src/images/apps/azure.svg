@@ -1,0 +1,23 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-7.37538,21.7888,-21.7888,-7.37538,10.5893,2.36885)">
+            <stop offset="0" style="stop-color:#114a8b;stop-opacity:1" />
+            <stop offset="1" style="stop-color:#0669bc;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.70604,0.576862,-0.576862,-1.70604,12.8932,12.523)">
+            <stop offset="0" style="stop-color:#000;stop-opacity:0.3" />
+            <stop offset="0.07" style="stop-color:#000;stop-opacity:0.2" />
+            <stop offset="0.32" style="stop-color:#000;stop-opacity:0.1" />
+            <stop offset="0.62" style="stop-color:#000;stop-opacity:0.05" />
+            <stop offset="1" style="stop-color:#000;stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(8.09599,21.5692,-21.5692,8.09599,11.955,1.73335)">
+            <stop offset="0" style="stop-color:#3ccbf4;stop-opacity:1" />
+            <stop offset="1" style="stop-color:#2892df;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <path fill="url(#linear1)" d="M8.001,0.693L15.103,0.693L7.73,22.537C7.575,22.996 7.142,23.307 6.658,23.307L1.131,23.307C0.51,23.307 0,22.797 0,22.176C0,22.053 0.02,21.931 0.059,21.815L6.928,1.463C7.083,1.004 7.516,0.693 8.001,0.693L8.001,0.693Z" />
+    <path fill="#0078d4" d="M18.321,15.344L7.059,15.344C7.059,15.344 7.059,15.344 7.059,15.344C6.773,15.344 6.537,15.58 6.537,15.866C6.537,16.01 6.597,16.148 6.703,16.247L13.94,23.001C14.15,23.198 14.428,23.307 14.716,23.307L21.093,23.307L18.321,15.344Z" />
+    <path fill="url(#linear2)" d="M8.001,0.693C7.511,0.691 7.073,1.011 6.925,1.478L0.068,21.796C0.024,21.919 0.001,22.048 0.001,22.178C0.001,22.797 0.511,23.307 1.131,23.307C1.132,23.307 1.133,23.307 1.134,23.307L6.803,23.307C7.233,23.23 7.589,22.927 7.733,22.516L9.101,18.486L13.986,23.042C14.191,23.211 14.447,23.305 14.713,23.307L21.066,23.307L18.28,15.344L10.157,15.346L15.128,0.693L8.001,0.693Z" />
+    <path fill="url(#linear3)" d="M17.072,1.462C16.917,1.004 16.484,0.693 16,0.693L8.085,0.693C8.569,0.693 9.002,1.004 9.157,1.462L16.026,21.815C16.065,21.931 16.085,22.053 16.085,22.176C16.085,22.797 15.575,23.307 14.954,23.307L22.87,23.307C23.49,23.307 24,22.797 24,22.176C24,22.053 23.98,21.931 23.941,21.815L17.072,1.462Z" />
+</svg>

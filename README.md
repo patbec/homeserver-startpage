@@ -1,5 +1,5 @@
 # thinkbox.center
-A small overview page about services running on my server, fork it and add your own services :)
+A small overview page of services hosted under my domain. Feel free to fork it and add your own services.
 
 ![Preview](./docs/website-preview-dark.png#gh-dark-mode-only)
 ![Preview](./docs/website-preview-light.png#gh-light-mode-only)
@@ -40,7 +40,7 @@ The colors used are determined by the browser, see at W3C CSS Color Module Level
 <br>
 
 <sup>(2)</sup>
-Some application icons are not available as vector graphics, they have been redrawn and may differ slightly from the manufacturer's icon. See [icon-node-red.svg](/src/images/icon-node-red.svg) as an example, I also upload customized files to [this](https://worldvectorlogo.com/logo/node-red-2) page.
+Vector images were used whenever possible, some application icons are from [Simple Icons](https://simpleicons.org/) and were manually post-processed. See [Zigbee2MQTT](https://raw.githubusercontent.com/patbec/thinkbox.center/main/src/images/apps/zigbee2mqtt.svg) or [Node-RED](https://raw.githubusercontent.com/patbec/thinkbox.center/main/src/images/apps/node-red.svg) as an example, the vector code was reduced and cleaned up.
 
 ## App icons
 
@@ -49,74 +49,61 @@ Symbols used on this page.
 <table wit>
 	<tr>
 		<th>Name</th>
-		<th>Type</th>
 		<th>Icon</th>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://nodered.org">Node-RED</a>
 		</td>
-  		<td>SVG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-node-red.svg"></img>
-        </td>
+   	<td align="center">
+      <img height=64px src="src/images/apps/nodered.svg"></img>
+    </td>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://www.zigbee2mqtt.io">Zigbee2MQTT</a>
 		</td>
-  		<td>PNG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-zigbee2mqtt.png"></img>
-        </td>
+   	<td align="center">
+      <img height=64px src="src/images/apps/zigbee2mqtt.svg"></img>
+    </td>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://grafana.com">Grafana</a>
 		</td>
-  		<td>SVG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-grafana.svg"></img>
-        </td>
+		<td align="center">
+			<img height=64px src="src/images/apps/grafana.svg"></img>
+		</td>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://www.portainer.io">Portainer</a>
 		</td>
-  		<td>SVG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-portainer.svg"></img>
-        </td>
- 	</tr>
- 	<tr>
-  		<td>
-			<a href="https://github.com/patbec/Sinedo">Sinedo</a>
+		<td align="center">
+			<img height=64px src="src/images/apps/portainer.svg"></img>
 		</td>
-  		<td>SVG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-sinedo.svg"></img>
-        </td>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://www.home-assistant.io">Home Assistant</a>
 		</td>
-  		<td>SVG with embedded PNG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-home-assistant.svg"></img>
-        </td>
+   	<td align="center">
+			<img height=64px src="src/images/apps/homeassistant.svg"></img>
+		</td>
  	</tr>
  	<tr>
-  		<td>
+  	<td>
 			<a href="https://hoppscotch.io">Hoppscotch</a>
 		</td>
-		<td>PNG</td>
-   		<td align="center">
-            <img height=64px src="src/images/icon-hoppscotch.png"></img>
-        </td>
+		<td align="center">
+			<img height=64px src="src/images/apps/hoppscotch.png"></img>
+		</td>
  	</tr>
 </table>
 
+## Setup
+
+These services are only accessible via <b>VPN</b>, the subdomain <i>(bsp. grafana.thinkbox.center)</i> returns a private IP address. Routers usually filter such requests via the [DNS rebind](https://en.wikipedia.org/wiki/DNS_rebinding) protection function.
 
 ## Licence
 
