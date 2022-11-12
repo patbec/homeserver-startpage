@@ -40,7 +40,7 @@ The colors used are determined by the browser, see at W3C CSS Color Module Level
 <br>
 
 <sup>(2)</sup>
-Vector images were used whenever possible, some application icons are from [Simple Icons](https://simpleicons.org/) and were manually post-processed. See [Zigbee2MQTT](https://raw.githubusercontent.com/patbec/thinkbox.center/main/src/images/apps/zigbee2mqtt.svg) or [Node-RED](https://raw.githubusercontent.com/patbec/thinkbox.center/main/src/images/apps/node-red.svg) as an example, the vector code was reduced and cleaned up.
+Vector images were used whenever possible, some application icons are from [Simple Icons](https://simpleicons.org/) and were manually post-processed. See [Zigbee2MQTT](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/zigbee2mqtt.svg?short_path=c657464) or [Node-RED](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/nodered.svg?short_path=cdbf839) as an example, the vector code was reduced and cleaned up.
 
 ## App icons
 
