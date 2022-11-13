@@ -1,4 +1,6 @@
 # thinkbox.center
+![Deploy](https://img.shields.io/github/deployments/patbec/thinkbox.center/github-pages?label=Deploy) ![Website](https://img.shields.io/website?label=Website&down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fthinkbox.center) ![HTML](https://img.shields.io/github/size/patbec/thinkbox.center/src/index.html?label=HTML)
+
 A small overview page of services hosted under my domain. Feel free to fork it and add your own services.
 
 ![Preview](./docs/website-preview-dark.png#gh-dark-mode-only)
