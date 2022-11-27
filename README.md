@@ -109,6 +109,13 @@ Symbols used on this page.
 
 These services are only accessible via <b>VPN</b>, the subdomain <i>(bsp. grafana.thinkbox.center)</i> returns a private IP address. Routers usually filter such requests via the [DNS rebind](https://en.wikipedia.org/wiki/DNS_rebinding) protection function.
 
+If you have a FRITZ!Box, you can add an exception for your domain with [this guide](https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7390/663_DNS-Auflosung-privater-IP-Adressen-nicht-moglich/).
+
+With this command you can check if the DNS resolution works:
+```
+nslookup portainer.thinkbox.center
+```
+
 ## Licence
 
 This project is licensed under MIT - See the [LICENSE](/LICENSE) file for more information.
