@@ -6,6 +6,8 @@ A small overview page of services hosted under my domain. Feel free to fork it a
 ![Preview](./docs/website-preview-dark.png#gh-dark-mode-only)
 ![Preview](./docs/website-preview-light.png#gh-light-mode-only)
 
+<img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
+
 ## Features
 
 A short list of what features the front-end offers.
