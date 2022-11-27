@@ -9,7 +9,12 @@
 	},
 	"extensions": {
 		"recommendations": [
-			"yandeu.five-server"
+			"ritwickdey.LiveServer"
 		]
+	},
+	"settings": {
+		"liveServer.settings.host": "0.0.0.0",
+		"liveServer.settings.root": "/src",
+		"liveServer.settings.port": 80
 	}
 }
