@@ -111,9 +111,9 @@ These services are only accessible via <b>VPN</b>, the subdomain <i>(bsp. grafan
 
 If you have a FRITZ!Box, you can add an exception for your domain with [this guide](https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7390/663_DNS-Auflosung-privater-IP-Adressen-nicht-moglich/).
 
-With this command you can check if the DNS resolution works:
+Use this command to check if DNS resolution is working:
 ```
-nslookup portainer.thinkbox.center
+nslookup grafana.thinkbox.center
 ```
 
 ## Licence
