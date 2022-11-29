@@ -48,7 +48,7 @@ Vector images were used whenever possible, some application icons are from [Simp
 
 ## Usage
 
-Open the `thinkbox.code workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
+Open the `thinkbox.code-workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
 
 The following settings have been preconfigured here:
 ```
