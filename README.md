@@ -46,9 +46,37 @@ The colors used are determined by the browser, see at W3C CSS Color Module Level
 <sup>(2)</sup>
 Vector images were used whenever possible, some application icons are from [Simple Icons](https://simpleicons.org/) and were manually post-processed. See [Zigbee2MQTT](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/zigbee2mqtt.svg?short_path=c657464) or [Node-RED](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/nodered.svg?short_path=cdbf839) as an example, the vector code was reduced and cleaned up.
 
-## App icons
+## Usage
 
-Symbols used on this page.
+Open the `thinkbox.code workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
+
+The following settings have been preconfigured here:
+```
+---
+"extensions": {
+	"recommendations": [
+		"ritwickdey.LiveServer"
+	]
+},
+"settings": {
+	"liveServer.settings.host": "0.0.0.0",
+	"liveServer.settings.root": "/src",
+	"liveServer.settings.port": 80
+}
+---
+```
+
+The website uses **absolute paths** for the image files, so the root directory `liveServer.settings.root` must be set to `src`.
+
+Under `.github/workflow` there is a `pages.yml` file, this is a customized version of the [original GitHub Pages](https://github.com/marketplace/actions/deploy-to-github-pages) workflow file to automatically deploy a web page. Compared to the default file, it only uploads the `src` folder, other contents like the docs folder etc. are ignored.
+
+When you fork this page, modify the `.well-known/security.txt` file. This file contains information for contacting researchers according to the standard [RFC9116](https://www.rfc-editor.org/rfc/rfc9116).
+
+With [this page](https://securitytxt.org/) you can create your own `security.txt` according to the current standard.
+
+## Icons
+
+App symbols used on this page.
 
 <table wit>
 	<tr>
