@@ -13,16 +13,10 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            #cloud-1 {
-                fill: #EA80FC;
-            }
-
-            #cloud-2 {
-                fill: #B64FC8;
-            }
-
-            #cloud-3 {
-                fill: #FFB2FF;
+            path {
+                fill: #fff;
+                stroke: #30363d;
+                stroke-width: 2px;
             }
         }
     </style>
