@@ -6,8 +6,6 @@ A small overview page of services hosted under my domain. Feel free to fork it a
 ![Preview](./docs/website-preview-dark.png#gh-dark-mode-only)
 ![Preview](./docs/website-preview-light.png#gh-light-mode-only)
 
-<img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
-
 ## Features
 
 A short list of what features the front-end offers.
@@ -27,7 +25,7 @@ A short list of what features the front-end offers.
 ✅ High contrast view <sup>(1)</sup>
 
 <b>High-DPI support:</b><br>
-✅ Yes - only SVGs are used <sup>(2)</sup><br>
+✅ Yes - SVGs are used <sup>(2)</sup><br>
 
 <b>Multilanguage:</b><br>
 ❌ No - English only<br>
@@ -76,9 +74,11 @@ With [this page](https://securitytxt.org/) you can create your own `security.txt
 
 ## Icons
 
+<img align="right" width="15%" src="src/favicon.svg" alt="Clouds"/>
+
 App symbols used on this page.
 
-<table wit>
+<table>
 	<tr>
 		<th>Name</th>
 		<th>Icon</th>
@@ -132,6 +132,8 @@ App symbols used on this page.
 		</td>
  	</tr>
 </table>
+
+<img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
 
 ## Setup
 

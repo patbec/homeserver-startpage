@@ -6,18 +6,14 @@
     <title>Services on thinkbox.center</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
     <meta name="robots" content="nofollow">
-
-    <!-- Default favicon with dark mode support -->
-    <link rel="shortcut icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
-
-    <!-- Safari icon -->
-    <link rel="mask-icon" href="images/mask-icon.svg" sizes="any" type="image/svg+xml" color="#ff9900">
-
-    <!-- Apple bookmark icon -->
-    <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png">
-
-    <!-- Supported color themes for correct native control rendering -->
     <meta name="color-scheme" content="light dark">
+
+    <link rel="icon" href="favicon.svg" media="(prefers-color-scheme:light)" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg" media="(prefers-color-scheme:dark)" sizes="any" type="image/svg+xml">
+
+    <!-- Safari icons -->
+    <link rel="mask-icon" href="images/mask-icon.svg" sizes="any" type="image/svg+xml" color="#ff9900">
+    <link rel="apple-touch-icon" href="images/bookmark.png" sizes="512x512" type="image/png">
 
     <!-- Background color for themes -->
     <meta name="theme-color" media="(prefers-color-scheme:light)" content="#fbfbfb">
@@ -68,8 +64,11 @@
 
         html,
         body {
-            height: 100%;
+            height: auto;
             width: 100%;
+
+            min-height: 100vh;
+            min-width: 100vw;
             margin: 0;
         }
 
@@ -86,7 +85,7 @@
 
             color: var(--color-text);
             background-color: var(--color-background);
-            background: linear-gradient(to bottom, var(--color-background), var(--color-header-background));
+            background: linear-gradient(var(--color-background), var(--color-header-background));
             background-attachment: fixed;
         }
 
@@ -181,7 +180,7 @@
 
 <body>
     <header>
-        <img height="36" width="36" src="images/favicon.svg" alt="Logo in the form of an abstract box.">
+        <img height="36" width="36" src="favicon.svg" alt="Logo in the form of an abstract box.">
         <h2>Services on thinkbox.center</h2>
     </header>
 
