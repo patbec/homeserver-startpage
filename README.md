@@ -46,6 +46,10 @@ Vector images were used whenever possible, some application icons are from [Simp
 
 ## Usage
 
+Here is a short summary of the project.
+
+### Workspace
+
 Open the `thinkbox.code-workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
 
 The following settings have been preconfigured here:
@@ -66,11 +70,36 @@ The following settings have been preconfigured here:
 
 The website uses **absolute paths** for the image files, so the root directory `liveServer.settings.root` must be set to `src`.
 
+### Workflow
+
 Under `.github/workflow` there is a `pages.yml` file, this is a customized version of the [original GitHub Pages](https://github.com/marketplace/actions/deploy-to-github-pages) workflow file to automatically deploy a web page. Compared to the default file, it only uploads the `src` folder, other contents like the docs folder etc. are ignored.
+
+### Security
 
 When you fork this page, modify the `.well-known/security.txt` file. This file contains information for contacting researchers according to the standard [RFC9116](https://www.rfc-editor.org/rfc/rfc9116).
 
 With [this page](https://securitytxt.org/) you can create your own `security.txt` according to the current standard.
+
+### Button
+
+Using the button `Open Console` to open an **SSH connection** from the browser works out-of-box on Linux and macOS. For Windows, a registry entry is required, e.g. pointing to the Windows terminal. This button is hidden on small screens.
+
+The shell handler looks like this: `ssh://console.thinkbox.center`
+
+> Because no username is defined in the url, your current one will be used.
+
+### Modifications
+
+After forking, changes should be made in the following places:
+
+* File `index.html`
+  * Page title
+  * Meta Tags url, author and description
+  * Services and urls
+* File `security.txt` _(See previous point)_
+* File `mask-main.svg` _(If you want to replace the cat asset with another one)_
+
+> Maybe I will create a Jinja2 template for Ansible at some point. Or support variables in the GitHub pipeline.
 
 ## Icons
 
@@ -129,6 +158,14 @@ App symbols used on this page.
 		</td>
 		<td align="center">
 			<img height=64px src="src/images/apps/hoppscotch.png"></img>
+		</td>
+ 	</tr>
+ 	<tr>
+  	<td>
+			<a href="https://traefik.io/traefik">Traefik</a>
+		</td>
+		<td align="center">
+			<img height=64px src="src/images/apps/traefik.svg"></img>
 		</td>
  	</tr>
 </table>
