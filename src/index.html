@@ -26,38 +26,53 @@
 
     <style>
         :root {
-            --color-background: white;
+            --color-site-background: white;
+            --color-site-text: black;
+
             --color-header-background: #fbfbfb;
-            --color-header-border: thin solid #dbdbdb;
 
-            --color-text: black;
-            --color-link: black;
+            --color-hyperlink-text: black;
 
+            --color-button-background: #ff9900;
+            --color-button-border: #f59300;
+            --color-button-text: white;
+
+            --style-header-border: thin solid #dbdbdb;
             --image-filter: none;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --color-background: #0d1117;
+                --color-site-background: #0d1117;
+                --color-site-text: white;
+
                 --color-header-background: #161b22;
-                --color-header-border: thin solid #2f2f32;
 
-                --color-text: white;
-                --color-link: white;
+                --color-hyperlink-text: white;
 
+                --color-button-background: #2d1c5a;
+                --color-button-border: #2f2f32;
+                --color-button-text: white;
+
+                --style-header-border: thin solid #2f2f32;
                 --image-filter: brightness(0.9);
             }
         }
 
         @media (forced-colors: active) {
             :root {
-                --color-background: Canvas;
+                --color-site-background: Canvas;
+                --color-site-text: CanvasText;
+
                 --color-header-background: Canvas;
-                --color-header-border: none;
 
-                --color-text: CanvasText;
-                --color-link: LinkText;
+                --color-hyperlink-text: LinkText;
 
+                --color-button-background: ButtonFace;
+                --color-button-border: LinkText;
+                --color-button-text: LinkText;
+
+                --style-header-border: none;
                 --image-filter: contrast(1.5);
             }
         }
@@ -83,9 +98,9 @@
             font-family: system-ui, Arial, Helvetica;
             font-weight: normal;
 
-            color: var(--color-text);
-            background-color: var(--color-background);
-            background: linear-gradient(var(--color-background), var(--color-header-background));
+            color: var(--color-site-text);
+            background-color: var(--color-site-background);
+            background: linear-gradient(var(--color-site-background), var(--color-header-background));
             background-attachment: fixed;
         }
 
@@ -114,8 +129,10 @@
         }
 
         header {
+            display: flex;
+
             background-color: var(--color-header-background);
-            border-bottom: var(--color-header-border);
+            border-bottom: var(--style-header-border);
         }
 
         @media only screen and (max-width: 285px) {
@@ -126,13 +143,43 @@
 
         header img {
             float: left;
-            padding: 20px;
-            padding-left: 32px;
-            padding-right: 22px;
+            margin: 20px;
+            margin-left: 32px;
+            margin-right: 2px;
         }
 
         header h2 {
-            padding: 20px;
+            flex-grow: 1;
+            margin: 20px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            header a {
+                display: none;
+            }
+        }
+
+        header a {
+            float: right;
+            place-self: center;
+            margin: 0px 24px;
+            padding: 7px 24px;
+            background-color: var(--color-button-background);
+            color: var(--color-button-text);
+            border-color: var(--color-button-border);
+            border-width: 1px;
+            border-style: solid;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 100px;
+            transition-timing-function: ease;
+            transition-duration: 0.2s;
+            transition-property: color, opacity, background-color;
+        }
+
+        header a:hover {
+            opacity: 0.9;
         }
 
         main {
@@ -168,7 +215,7 @@
 
             max-width: 200px;
 
-            color: var(--color-link);
+            color: var(--color-hyperlink-text);
             text-decoration: none;
         }
 
@@ -182,10 +229,13 @@
     <header>
         <img height="36" width="36" src="favicon.svg" alt="Logo in the form of an abstract box.">
         <h2>Services on thinkbox.center</h2>
+        <a href="ssh://console.thinkbox.center" title="Opens an SSH connection with the default shell to the host.">
+            <span>Open Console</span>
+        </a>
     </header>
 
     <main>
-        <a rel=" noopener" href="https://node.thinkbox.center" aria-label="Node-RED"
+        <a rel="noopener" href="https://node.thinkbox.center" aria-label="Node-RED"
             title="Node-RED is a flow-based development tool for visual programming developed originally by IBM for wiring together hardware devices, APIs and online services as part of the Internet of Things.">
             <img height="100" width="100" src="images/apps/nodered.svg" alt="Node-RED logo." />
 
