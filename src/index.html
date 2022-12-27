@@ -34,7 +34,6 @@
             --color-hyperlink-text: black;
 
             --color-button-background: #ff9900;
-            --color-button-border: #f59300;
             --color-button-text: white;
 
             --style-header-border: thin solid #dbdbdb;
@@ -51,7 +50,6 @@
                 --color-hyperlink-text: white;
 
                 --color-button-background: #2d1c5a;
-                --color-button-border: #2f2f32;
                 --color-button-text: white;
 
                 --style-header-border: thin solid #2f2f32;
@@ -69,7 +67,6 @@
                 --color-hyperlink-text: LinkText;
 
                 --color-button-background: ButtonFace;
-                --color-button-border: LinkText;
                 --color-button-text: LinkText;
 
                 --style-header-border: none;
@@ -163,16 +160,14 @@
             float: right;
             place-self: center;
             margin: 0px 24px;
-            padding: 7px 24px;
-            background-color: var(--color-button-background);
+            padding: 8px 24px;
             color: var(--color-button-text);
-            border-color: var(--color-button-border);
-            border-width: 1px;
-            border-style: solid;
+            background-color: var(--color-button-background);
+            border-radius: 100px;
             font-size: 1.2rem;
             font-weight: 500;
             text-decoration: none;
-            border-radius: 100px;
+
             transition-timing-function: ease;
             transition-duration: 0.2s;
             transition-property: color, opacity, background-color;
