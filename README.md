@@ -187,6 +187,11 @@ nslookup grafana.thinkbox.center
 
 <details>
   <summary>Sample config for *traefik* and let's encrypt</summary>
+
+	### Treafik
+
+	A sample config to provide HTTPS connection for the services.
+
 	```
 	version: '3.9'
 	services:
@@ -230,6 +235,7 @@ nslookup grafana.thinkbox.center
 				- traefik.http.middlewares.exceptions.errors.service=serviceError
 				- traefik.http.middlewares.exceptions.errors.query=/{status}.html
 	```
+
 </details>
 
 ## Licence
