@@ -185,6 +185,53 @@ Use this command to check if DNS resolution is working:
 nslookup grafana.thinkbox.center
 ```
 
+<details>
+  <summary>Sample config for *traefik* and let's encrypt</summary>
+	```
+	version: '3.9'
+	services:
+		traefik:
+			container_name: traefik
+			image: "traefik:v2.8"
+			restart: unless-stopped
+			volumes:
+				- /var/run/docker.sock:/var/run/docker.sock:ro
+				- /var/lib/certificates:/certificates
+			command:
+				- --api.dashboard=true
+				- --providers.docker=true
+				- --providers.docker.exposedbydefault=true
+				- --certificatesresolvers.letsencrypt.acme.dnschallenge=true
+				- --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=joker
+				- --certificatesresolvers.letsencrypt.acme.email=info@thinkbox.center
+				- --certificatesresolvers.letsencrypt.acme.storage=/certificates/acme.json
+				- --entrypoints.web.address=:80
+				- --entrypoints.web.http.redirections.entrypoint.to=websecure
+				- --entrypoints.web.http.redirections.entrypoint.scheme=https
+				- --entrypoints.web.http.redirections.entrypoint.permanent=true
+				- --entrypoints.websecure.address=:443
+				- --entrypoints.websecure.http.tls=true
+				- --entrypoints.websecure.http.tls.certResolver=letsencrypt
+				- --entrypoints.websecure.http.tls.domains[0].main=thinkbox.center
+				- --entrypoints.websecure.http.tls.domains[0].sans=*.thinkbox.center
+			ports:
+				- "80:80"
+				- "443:443"
+			environment:
+				- JOKER_API_MODE=SVC
+				- JOKER_USERNAME=${SECRET_DNS_JOKER_USERNAME}
+				- JOKER_PASSWORD=${SECRET_DNS_JOKER_PASSWORD}
+			networks:
+				- default
+			labels:
+				- traefik.http.routers.dashboard.rule=Host(`traefik.thinkbox.center`)
+				- traefik.http.routers.dashboard.service=api@internal
+				- traefik.http.routers.dashboard.entrypoints=websecure
+				- traefik.http.middlewares.exceptions.errors.service=serviceError
+				- traefik.http.middlewares.exceptions.errors.query=/{status}.html
+	```
+</details>
+
 ## Licence
 
 This project is licensed under MIT - See the [LICENSE](/LICENSE) file for more information.
