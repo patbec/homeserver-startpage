@@ -30,11 +30,7 @@
             --color-site-text: black;
 
             --color-header-background: #fbfbfb;
-
             --color-hyperlink-text: black;
-
-            --color-button-background: #ff9900;
-            --color-button-text: white;
 
             --style-header-border: thin solid #dbdbdb;
             --image-filter: none;
@@ -46,11 +42,7 @@
                 --color-site-text: white;
 
                 --color-header-background: #161b22;
-
                 --color-hyperlink-text: white;
-
-                --color-button-background: #2d1c5a;
-                --color-button-text: white;
 
                 --style-header-border: thin solid #2f2f32;
                 --image-filter: brightness(0.9);
@@ -63,11 +55,7 @@
                 --color-site-text: CanvasText;
 
                 --color-header-background: Canvas;
-
                 --color-hyperlink-text: LinkText;
-
-                --color-button-background: ButtonFace;
-                --color-button-text: LinkText;
 
                 --style-header-border: none;
                 --image-filter: contrast(1.5);
@@ -126,8 +114,6 @@
         }
 
         header {
-            display: flex;
-
             background-color: var(--color-header-background);
             border-bottom: var(--style-header-border);
         }
@@ -140,41 +126,13 @@
 
         header img {
             float: left;
-            margin: 20px;
-            margin-left: 32px;
-            margin-right: 2px;
+            padding: 20px;
+            padding-left: 32px;
+            padding-right: 22px;
         }
 
         header h2 {
-            flex-grow: 1;
-            margin: 20px;
-        }
-
-        @media only screen and (max-width: 800px) {
-            header a {
-                display: none;
-            }
-        }
-
-        header a {
-            float: right;
-            place-self: center;
-            margin: 0px 24px;
-            padding: 8px 24px;
-            color: var(--color-button-text);
-            background-color: var(--color-button-background);
-            border-radius: 100px;
-            font-size: 1.2rem;
-            font-weight: 500;
-            text-decoration: none;
-
-            transition-timing-function: ease;
-            transition-duration: 0.2s;
-            transition-property: opacity;
-        }
-
-        header a:hover {
-            opacity: 0.9;
+            padding: 20px;
         }
 
         main {
@@ -229,9 +187,6 @@
     <header>
         <img height="36" width="36" src="favicon.svg" alt="Logo in the form of an abstract box.">
         <h2>Services on thinkbox.center</h2>
-        <a href="ssh://console.thinkbox.center" title="Opens an SSH connection with the default shell to the host.">
-            <span>Open Console</span>
-        </a>
     </header>
 
     <main>
@@ -276,6 +231,12 @@
             <img height="100" width="100" src="images/apps/traefik.svg" alt="Traefik logo." />
 
             <p translate="no">Traefik</p>
+        </a>
+        <a rel="noopener" href="ssh://console.thinkbox.center" aria-label="Console"
+            title="Opens an SSH connection with the default shell to the container host.">
+            <img height="100" width="100" src="images/apps/console.svg" alt="Abstract console logo." />
+
+            <p translate="yes">Console</p>
         </a>
     </main>
 </body>
