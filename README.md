@@ -80,13 +80,15 @@ When you fork this page, modify the `.well-known/security.txt` file. This file c
 
 With [this page](https://securitytxt.org/) you can create your own `security.txt` according to the current standard.
 
-### Button
+### Handlers
 
-Using the button `Open Console` to open an **SSH connection** from the browser works out-of-box on Linux and macOS. For Windows, a registry entry is required, e.g. pointing to the Windows terminal. This button is hidden on small screens.
+If you want to use the `Console` item to open an **SSH connection**, it works out of the box on Linux and macOS. For Windows, a registry entry is required, pointing to the Windows terminal, for example.
 
 The shell handler looks like this: `ssh://console.thinkbox.center`
 
-> Because no username is defined in the url, your current one will be used.
+> Since there is no username defined in the url, your current username will be used for the SSH connection.
+
+> Use [Swift Default Apps](https://formulae.brew.sh/cask/swiftdefaultappsprefpane) on macOS to change the default terminal application.
 
 ### Modifications
 
