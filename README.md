@@ -186,7 +186,7 @@ nslookup grafana.thinkbox.center
 ```
 
 <details>
-  <summary>Sample config for *traefik* and let's encrypt</summary>
+  <summary>Sample config for traefik and let's encrypt</summary>
 
 ### Treafik
 
