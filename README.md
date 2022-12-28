@@ -170,6 +170,14 @@ App symbols used on this page.
 			<img height=64px src="src/images/apps/traefik.svg"></img>
 		</td>
  	</tr>
+ 	<tr>
+  	<td>
+			<a href="https://hyper.is/">Hyper</a>
+		</td>
+		<td align="center">
+			<img height=64px src="src/images/apps/hyper.svg"></img>
+		</td>
+ 	</tr>
 </table>
 
 <img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
