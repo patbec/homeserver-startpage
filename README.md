@@ -82,7 +82,7 @@ With [this page](https://securitytxt.org/) you can create your own `security.txt
 
 ### Handlers
 
-If you want to use the `Console` item to open an **SSH connection**, it works out of the box on Linux and macOS. For Windows, a registry entry is required, pointing to the Windows terminal, for example.
+If you want to use the `Secure Shell` item to open an **SSH connection**, it works out of the box on Linux and macOS. For Windows, a registry entry is required, pointing to the Windows terminal, for example.
 
 The shell handler looks like this: `ssh://console.thinkbox.center`
 
