@@ -53,16 +53,7 @@ Here is a summary about the project directory.
 
 Open this folder using Visual Studio Code. After opening, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
 
-The following settings have been preconfigured here:
-```
-{
-  "liveServer.settings.host": "0.0.0.0",
-  "liveServer.settings.root": "/src",
-  "liveServer.settings.port": 8080
-}
-```
-
-The website uses **absolute paths** for the image files, so the root directory `liveServer.settings.root` must be set to `src`.
+The website uses **absolute paths** for the image files, so the `liveServer.settings.root` setting in `setting.json` is set to the `src` folder.
 
 ### Workflow
 
@@ -81,7 +72,7 @@ If you want to use the `Secure Shell` item to open an **SSH connection**, it wor
 The shell handler looks like this: `ssh://console.thinkbox.center`
 
 > Since there is no username defined in the url, your current username will be used for the SSH connection.
-
+>
 > Use [Swift Default Apps](https://formulae.brew.sh/cask/swiftdefaultappsprefpane) on macOS to change the default terminal application.
 
 ### Modifications
@@ -94,8 +85,6 @@ After forking, changes should be made in the following places:
   * Services and urls
 * File `security.txt` _(See previous point)_
 * File `mask-main.svg` _(If you want to replace the cat asset with another one)_
-
-> Maybe I will create a Jinja2 template for Ansible at some point. Or support variables in the GitHub pipeline.
 
 ## Icons
 
@@ -184,21 +173,21 @@ App symbols used on this page.
 
 ## Setup
 
-These services are only accessible via <b>VPN</b>, the subdomain <i>(bsp. grafana.thinkbox.center)</i> returns a private IP address. Routers usually filter such requests via the [DNS rebind](https://en.wikipedia.org/wiki/DNS_rebinding) protection function.
+These services are only accessible via <b>VPN</b>, the subdomain <i>(bsp. test.thinkbox.center)</i> returns a private IP address. Routers usually filter such requests via the [DNS rebind](https://en.wikipedia.org/wiki/DNS_rebinding) protection function.
 
 If you have a FRITZ!Box, you can add an exception for your domain with [this guide](https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7390/663_DNS-Auflosung-privater-IP-Adressen-nicht-moglich/).
 
-Use this command to check if DNS resolution is working:
+Use a command like this to check if DNS resolution is working:
 ```
-nslookup grafana.thinkbox.center
+nslookup test.thinkbox.center
 ```
 
 <details>
-  <summary>Sample config for traefik with let's encrypt</summary>
+  <summary>Example configuration for a reverse proxy with certificate from let's encrypt</summary>
 
 ### Treafik
 
-A sample config to provide a HTTPS connection for the services.
+A sample config to provide a HTTPS connection for docker services.
 
 ```
 version: '3.9'
@@ -243,6 +232,8 @@ services:
       - traefik.http.middlewares.exceptions.errors.service=serviceError
       - traefik.http.middlewares.exceptions.errors.query=/{status}.html
 ```
+
+Use a DNS wildcard `A/AAAA-Record` to forward all requests to your Traefik.
 
 </details>
 
