@@ -1,4 +1,5 @@
 # thinkbox.center
+
 ![Deploy](https://img.shields.io/github/deployments/patbec/thinkbox.center/github-pages?label=deploy) ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fthinkbox.center) ![html](https://img.shields.io/github/size/patbec/thinkbox.center/src/index.html?label=html)
 
 A small overview page of services hosted under my domain. Feel free to fork it and add your own services.
@@ -46,9 +47,9 @@ Vector images were used whenever possible, some application icons are from [Simp
 
 ## Usage
 
-Here is a short summary of the project.
+Here is a summary about the project directory.
 
-### Workspace
+### Project
 
 Open the `thinkbox.code-workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
 
@@ -104,8 +105,6 @@ After forking, changes should be made in the following places:
 > Maybe I will create a Jinja2 template for Ansible at some point. Or support variables in the GitHub pipeline.
 
 ## Icons
-
-<img align="right" width="15%" src="src/favicon.svg" alt="Clouds"/>
 
 App symbols used on this page.
 
@@ -178,6 +177,14 @@ App symbols used on this page.
 			<img height=64px src="src/images/apps/hyper.svg"></img>
 		</td>
  	</tr>
+ 	<tr>
+  	<td>
+			<a href="https://www.proxmox.com/">Proxmox</a>
+		</td>
+		<td align="center">
+			<img height=64px src="src/images/apps/proxmox.svg"></img>
+		</td>
+ 	</tr>
 </table>
 
 <img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
@@ -198,7 +205,7 @@ nslookup grafana.thinkbox.center
 
 ### Treafik
 
-A sample config to provide HTTPS connection for the services.
+A sample config to provide a HTTPS connection for the services.
 
 ```
 version: '3.9'
