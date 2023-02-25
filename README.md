@@ -1,4 +1,4 @@
-# thinkbox.center
+# thinkbox.center <img width="11%" align="right" src="src/favicon.svg"></img>
 
 ![Deploy](https://img.shields.io/github/deployments/patbec/thinkbox.center/github-pages?label=deploy) ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fthinkbox.center) ![html](https://img.shields.io/github/size/patbec/thinkbox.center/src/index.html?label=html)
 
