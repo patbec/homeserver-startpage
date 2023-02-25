@@ -51,22 +51,15 @@ Here is a summary about the project directory.
 
 ### Project
 
-Open the `thinkbox.code-workspace` using Visual Studio Code. After opening the workspace file, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
+Open this folder using Visual Studio Code. After opening, the [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension is offered as the recommended extension to install. If you are using a different local web server for testing, you can ignore the recommendation.
 
 The following settings have been preconfigured here:
 ```
----
-"extensions": {
-	"recommendations": [
-		"ritwickdey.LiveServer"
-	]
-},
-"settings": {
-	"liveServer.settings.host": "0.0.0.0",
-	"liveServer.settings.root": "/src",
-	"liveServer.settings.port": 80
+{
+  "liveServer.settings.host": "0.0.0.0",
+  "liveServer.settings.root": "/src",
+  "liveServer.settings.port": 8080
 }
----
 ```
 
 The website uses **absolute paths** for the image files, so the root directory `liveServer.settings.root` must be set to `src`.
