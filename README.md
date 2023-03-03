@@ -40,8 +40,6 @@ A short list of what features the front-end offers.
 High contrast view is for people with low vision. Activate the `forced-colors` scheme under `More Tools -> Rendering` in Chrome Dev Tools to get a preview.<br>
 The colors used are determined by the browser, see at W3C CSS Color Module Level 4 - [6.2. System Colors](https://www.w3.org/TR/css-color-4/#css-system-colors).
 
-<br>
-
 <sup>(2)</sup>
 Vector images were used whenever possible, some application icons are from [Simple Icons](https://simpleicons.org/) and were manually post-processed. See [Zigbee2MQTT](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/zigbee2mqtt.svg?short_path=c657464) or [Node-RED](https://github.com/patbec/thinkbox.center/blob/f6a5288f53e902a0a1a430dea4d855bf444f1367/src/images/apps/nodered.svg?short_path=cdbf839) as an example, the vector code was reduced and cleaned up.
 
@@ -65,111 +63,43 @@ When you fork this page, modify the `.well-known/security.txt` file. This file c
 
 With [this page](https://securitytxt.org/) you can create your own `security.txt` according to the current standard.
 
-### Handlers
+### Handler
 
 If you want to use the `Secure Shell` item to open an **SSH connection**, it works out of the box on Linux and macOS. For Windows, a registry entry is required, pointing to the Windows terminal, for example.
 
 The shell handler looks like this: `ssh://console.thinkbox.center`
 
 > Since there is no username defined in the url, your current username will be used for the SSH connection.
->
-> Use [Swift Default Apps](https://formulae.brew.sh/cask/swiftdefaultappsprefpane) on macOS to change the default terminal application.
 
 ### Modifications
 
 After forking, changes should be made in the following places:
 
-* File `index.html`
-  * Page title
-  * Meta Tags url, author and description
-  * Services and urls
+* File `index.html` _(title and meta tags + content)_
 * File `security.txt` _(See previous point)_
 * File `mask-main.svg` _(If you want to replace the cat asset with another one)_
 
-## Icons
+## Design <img align="right" height="50" src="docs/cloud.svg" alt="Cloud"/>
 
-App symbols used on this page.
+Here are a few small good-to-know points when customizing the look of the page.
 
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Icon</th>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://nodered.org">Node-RED</a>
-		</td>
-   	<td align="center">
-      <img height=64px src="src/images/apps/nodered.svg"></img>
-    </td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://www.zigbee2mqtt.io">Zigbee2MQTT</a>
-		</td>
-   	<td align="center">
-      <img height=64px src="src/images/apps/zigbee2mqtt.svg"></img>
-    </td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://grafana.com">Grafana</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/grafana.svg"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://www.portainer.io">Portainer</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/portainer.svg"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://www.home-assistant.io">Home Assistant</a>
-		</td>
-   	<td align="center">
-			<img height=64px src="src/images/apps/homeassistant.svg"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://hoppscotch.io">Hoppscotch</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/hoppscotch.png"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://traefik.io/traefik">Traefik</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/traefik.svg"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://hyper.is/">Hyper</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/hyper.svg"></img>
-		</td>
- 	</tr>
- 	<tr>
-  	<td>
-			<a href="https://www.proxmox.com/">Proxmox</a>
-		</td>
-		<td align="center">
-			<img height=64px src="src/images/apps/proxmox.svg"></img>
-		</td>
- 	</tr>
-</table>
+### Mask Color
 
-<img align="right" width="30%" src="docs/clouds.svg" alt="Clouds"/>
+The file `mask-main.svg` has the border color `#808080`, this shade of gray matches the light and dark theme without color changes.
+
+### SVG favicons
+
+The favorite icon supports the `light`, `dark` and `high contrast` theme. For this a [CSS Media Query was embedded](https://github.com/patbec/thinkbox.center/blob/main/src/favicon.svg?short_path=231b622#L5) directly in the SVG. [See here](https://caniuse.com/link-icon-svg) what browsers fully support SVG favicons.
+
+### Overflow color
+
+The background is a gradient, on touch devices you can scroll beyond the page border. As you can see in [this example image](docs/website-gradient-sample.png), the page has the same color at the top and bottom. This prevents a color break when scrolling beyond the page border on a smartphone or tablet.
+The overflow color can only have a solid color and is set with `theme-color`.
+
+```html
+<meta name="theme-color" media="(prefers-color-scheme:light)" content="#fbfbfb">
+<meta name="theme-color" media="(prefers-color-scheme:dark)" content="#161b22">
+```
 
 ## Setup
 
