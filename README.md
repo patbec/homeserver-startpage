@@ -173,4 +173,4 @@ This project is licensed under MIT - See the [LICENSE](/LICENSE) file for more i
 
 ---
 
-&uarr; [Back to top](#thinkboxcenter)
+&uarr; [Back to top](#)
